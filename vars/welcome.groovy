@@ -4,11 +4,11 @@ def fnWelcome(pName){
 
 def fnRunPowerShell(pName){
     echo "Ralf Merznicht ist ${pName}"
-    withEnv(["ParamInPowershell=${env:TIMEZONE}"])
-    {    
+    //withEnv(["ParamInPowershell=${env:TIMEZONE}"])
+    //{    
         powershell script{'''
-            Write-Output ${ParamInPowershell}
+            Write-Output ${env:TIMEZONE}
         '''
         }
-    }
+    //}
 }
