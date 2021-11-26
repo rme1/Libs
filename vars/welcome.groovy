@@ -18,19 +18,19 @@ def WaitForNextTimeZone() {
     // {
         powershell script: '''
             
-            $TimeZone = ${TIMEZONE}
             Write-Output "----------------------------------------------------------------"
             Write-Output "----------------------------------------------------------------"
-            Write-Output "----> ParamInPowershell: $TimeZone"
+            $TimeZone = ${env:TIMEZONE}
+            Write-Output "----> TimeZone: $TimeZone"
             Write-Output "----------------------------------------------------------------"
             $LoopSleep = ${SLEEPSECONDS}
-            Write-Output "----> ParamLoopSleep: $LoopSleep"
+            Write-Output "----> ParaLoopSleepmLoopSleep: $LoopSleep"
             Write-Output "----------------------------------------------------------------"
-            $DryRun = ${DRY_RUN}
-            Write-Output "----> ParamDryRun: $DryRun"
+            $DryRun = ${env:DRY_RUN}
+            Write-Output "----> DryRun: $DryRun"
             Write-Output "----------------------------------------------------------------"
-            $WaitMinutes = ${WAITMINUTES}
-            Write-Output "----> ParamWaitMinutes: $WaitMinutes"
+            $WaitMinutes = ${env:WAITMINUTES}
+            Write-Output "----> WaitMinutes: $WaitMinutes"
             Write-Output "----------------------------------------------------------------"
             Write-Output "----------------------------------------------------------------"
             
