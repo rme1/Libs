@@ -4,9 +4,12 @@ def fnWelcome(pName){
 
 def fnRunPowerShell(pName){
     echo "Ralf Merznicht ist ${pName}"
-    powershell script{'''
-        Write-Output ${pName}
-    '''
+    withEnv(["pPsName=${pName}"])
+    {    
+        powershell script{'''
+            Write-Output ${pPsName}
+        '''
+        }
     }
 }
 
