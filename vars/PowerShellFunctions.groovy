@@ -73,7 +73,6 @@ def WaitForNextTimeZone() {
             Write-Output "Start: $Now"
             $LoopTimeToStart = ($LoopTimeToStart - $Now)
             $LoopSeconds = $LoopTimeToStart.TotalSeconds
-            
  
             while ($LoopSeconds -ge 0)
                 {
