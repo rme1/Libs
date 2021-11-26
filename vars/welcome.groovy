@@ -5,7 +5,7 @@ def fnWelcome(pName){
 def fnRunPowerShell(pName){
     echo "Ralf Merznicht ist ${pName}"
     powershell script{'''
-        Write-Output "----------------------------------------------------------------"
+        Write-Output ${pName}
     '''
     }
 }
