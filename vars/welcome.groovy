@@ -24,7 +24,7 @@ def WaitForNextTimeZone() {
             Write-Output "----> TimeZone: $TimeZone"
             Write-Output "----------------------------------------------------------------"
             $LoopSleep = ${SLEEPSECONDS}
-            Write-Output "----> ParaLoopSleepmLoopSleep: $LoopSleep"
+            Write-Output "----> LoopSleep: $LoopSleep"
             Write-Output "----------------------------------------------------------------"
             $DryRun = ${env:DRY_RUN}
             Write-Output "----> DryRun: $DryRun"
