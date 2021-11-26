@@ -1,6 +1,6 @@
 def WaitForNextTimeZone() {
     powershell script: '''
-        
+
         Write-Output "----------------------------------------------------------------"
         Write-Output "----------------------------------------------------------------"
         $TimeZone = ${env:TIMEZONE}
@@ -16,7 +16,7 @@ def WaitForNextTimeZone() {
         Write-Output "----> WaitMinutes: $WaitMinutes"
         Write-Output "----------------------------------------------------------------"
         Write-Output "----------------------------------------------------------------"
-        
+
         $Now = Get-Date
         $JobStartDateText = '{0:d4}' -f $Now.Year + "|" +'{0:d2}' -f $Now.Month + "|" + '{0:d2}' -f $Now.Day + "|" + '{0:d2}' -f $Now.Hour + "|" + '{0:d2}' -f $Now.Minute
         $JobStartDateText
