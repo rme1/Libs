@@ -2,6 +2,14 @@ def fnWelcome(pName){
     echo "Ralf Merznicht ist ${pName}"
 }
 
+def fnRunPowerShell(pName){
+    echo "Ralf Merznicht ist ${pName}"
+    powershell script{'''
+        Write-Output "----------------------------------------------------------------"
+    '''
+    }
+}
+
 def WaitForNextTimeZone() {
     withEnv(["ParamInPowershell=${TIMEZONE}","ParamLoopSleep=${SLEEPSECONDS}","ParamDryRun=${DRY_RUN}","ParamWaitMinutes=${WAITMINUTES}"])
     {
