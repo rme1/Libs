@@ -4,7 +4,7 @@ def fnWelcome(pName){
 
 def fnRunPowerShell(pName){
     echo "Ralf Merznicht ist ${pName}"
-    withEnv(["ParamInPowershell=${TIMEZONE}"])
+    withEnv(["ParamInPowershell=${env:TIMEZONE}"])
     {    
         powershell script{'''
             Write-Output ${ParamInPowershell}
