@@ -1,15 +1,20 @@
 def LoadTables(){
-    stage('STA_TO_PSTA_ISCALA_36'){
-        steps{
-            script{
-                try {
-                    if (params.DRY_RUN == true){
-                        echo('fnExecuteSql(${env:SQLSTATEMENT})')
-                    } else {
-                        psfunctions.fnExecuteSql("${env:SQLSTATEMENT}")
+    stages{
+        stage('SqlServerExecuteCommand'){
+            steps{
+                script{
+                    try {
+                        if (params.DRY_RUN == true) {
+                            echo('fnExecuteSql(${env:SQLSTATEMENT})')
+                        } else {
+                            //psfunctions.fnExecuteSql("${env:SQLSTATEMENT}")
+                            psta_iscala_36.LoadTables()
+                        }
                     }
-                } catch (e){
-                    echo('detected failure: function_PSTA_ISCALA_36()')
+                    catch (e) {
+                        echo('detected failure ... --> TODO Get Failure !!!')
+                        throw(e)
+                    }
                 }
             }
         }
