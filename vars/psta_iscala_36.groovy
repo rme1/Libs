@@ -1,5 +1,5 @@
 def LoadTables(){
-    stages{
+    //stages{
         stage('SqlServerExecuteCommand'){
             steps{
                 script{
@@ -17,7 +17,7 @@ def LoadTables(){
                 }
             }
         }
-    }
+    //}
 }
 /*
 def function_PSTA_ISCALA_36() {
