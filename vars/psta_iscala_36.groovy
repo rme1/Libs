@@ -1,3 +1,21 @@
+def LoadTables(){
+    stage('STA_TO_PSTA_ISCALA_36'){
+        steps{
+            script{
+                try {
+                    if{
+                        echo('fnExecuteSql(${env:SQLSTATEMENT})')
+                    } else {
+                        psfunctions.fnExecuteSql("${env:SQLSTATEMENT}")
+                    }
+                } catch (e){
+                    echo('detected failure: function_PSTA_ISCALA_36()')
+                }
+            }
+        }
+    }
+}
+/*
 def function_PSTA_ISCALA_36() {
     stage('PSTA_ISCALA_36')
     {
@@ -15,3 +33,4 @@ def function_PSTA_ISCALA_36() {
         parallel PSTA_ISCALA_36
     }
 }
+*/
