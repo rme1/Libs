@@ -3,7 +3,7 @@ def LoadTables(){
         steps{
             script{
                 try {
-                    if{
+                    if (params.DRY_RUN == true){
                         echo('fnExecuteSql(${env:SQLSTATEMENT})')
                     } else {
                         psfunctions.fnExecuteSql("${env:SQLSTATEMENT}")
