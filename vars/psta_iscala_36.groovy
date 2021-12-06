@@ -7,8 +7,7 @@ def LoadTables(){
                         if (params.DRY_RUN == true) {
                             echo('fnExecuteSql(${env:SQLSTATEMENT})')
                         } else {
-                            //psfunctions.fnExecuteSql("${env:SQLSTATEMENT}")
-                            psta_iscala_36.LoadTables()
+                            psfunctions.fnExecuteSql("${env:SQLSTATEMENT}")
                         }
                     }
                     catch (e) {
